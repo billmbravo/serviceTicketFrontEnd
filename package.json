@@ -7,11 +7,15 @@
 		"@testing-library/jest-dom": "^4.2.4",
 		"@testing-library/react": "^9.5.0",
 		"@testing-library/user-event": "^7.2.1",
+		"bootstrap": "^4.5.2",
+		"jquery": "^3.5.1",
 		"mobx": "^5.15.6",
 		"mobx-react": "^6.2.5",
+		"popper.js": "^1.16.1",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
-		"react-scripts": "3.4.3"
+		"react-scripts": "3.4.3",
+		"react-select": "^3.1.0"
 	},
 	"scripts": {
 		"start": "react-scripts start",
@@ -23,7 +27,15 @@
 		"extends": "react-app"
 	},
 	"browserslist": {
-		"production": [ ">0.2%", "not dead", "not op_mini all" ],
-		"development": [ "last 1 chrome version", "last 1 firefox version", "last 1 safari version" ]
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
 	}
 }
