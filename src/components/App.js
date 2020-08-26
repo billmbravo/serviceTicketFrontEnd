@@ -5,6 +5,7 @@ import InputField from './InputField';
 import SubmitButton from './SubmitButton';
 import NavBar from './NavBar';
 import CreateTicketForm from './CreateTicketForm';
+import RegisterUser from './RegisterUser';
 
 class App extends React.Component {
 	async componentDidMount() {}
@@ -13,8 +14,9 @@ class App extends React.Component {
 		return (
 			<div className="container-fluid p-0">
 				<NavBar />
+				<RegisterUser />
 				{/* <LoginForm /> */}
-				<CreateTicketForm />
+				{/* <CreateTicketForm /> */}
 			</div>
 		);
 	}

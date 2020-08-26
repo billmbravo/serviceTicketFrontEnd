@@ -5,7 +5,7 @@ import AsyncSelect from 'react-select/async';
 import SelectField from './SelectField';
 import TextArea from './TextArea';
 const urlApiLocal = 'http://127.0.0.1:8000/api/user/ticket';
-// const urlApi = 'http://127.0.0.1:8000/api/user/ticket';
+const urlApi = 'http://apitest2.beatlech.com/public/api/user/ticket';
 class CreateTicketForm extends React.Component {
 	getPriorities = async () => {
 		const response = await fetch('http://127.0.0.1:8000/api/priorities');
@@ -81,6 +81,7 @@ class CreateTicketForm extends React.Component {
 					onChange={(val) => this.setInputValue('priority_id', val)}
 					data={this.state.priorities}
 					text="Prioridad"
+					type="priority"
 				/>
 				<TextArea
 					value={this.state.descripcion ? this.state.descripcion : ''}

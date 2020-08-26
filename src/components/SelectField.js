@@ -12,13 +12,22 @@ class SelectField extends React.Component {
 					id="prioritieSelect"
 					onChange={(e) => this.props.onChange(e.target.value)}
 					value={this.props.value}
+					type={this.props.type}
 				>
 					{this.props.data.map((e) => {
-						return (
-							<option value={e.id} key={e.id}>
-								{e.id}. {e.name}
-							</option>
-						);
+						if (this.props.type == 'priority') {
+							return (
+								<option value={e.id} key={e.id}>
+									{e.id}. {e.name}
+								</option>
+							);
+						} else if (this.props.type == 'roles') {
+							return (
+								<option value={e.id} key={e.id}>
+									{e.id}. {e.title}
+								</option>
+							);
+						} else return null;
 					})}
 				</select>
 			</div>
