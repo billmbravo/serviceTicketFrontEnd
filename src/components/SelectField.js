@@ -1,7 +1,4 @@
 import React from 'react';
-import Option from './Option';
-import { Callbacks } from 'jquery';
-import Select from 'react-select';
 class SelectField extends React.Component {
 	render() {
 		return (
@@ -15,13 +12,13 @@ class SelectField extends React.Component {
 					type={this.props.type}
 				>
 					{this.props.data.map((e) => {
-						if (this.props.type == 'priority') {
+						if (this.props.type === 'name') {
 							return (
 								<option value={e.id} key={e.id}>
 									{e.id}. {e.name}
 								</option>
 							);
-						} else if (this.props.type == 'roles') {
+						} else if (this.props.type === 'title') {
 							return (
 								<option value={e.id} key={e.id}>
 									{e.id}. {e.title}

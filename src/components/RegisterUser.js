@@ -78,7 +78,7 @@ class RegisterUser extends React.Component {
 					onChange={(val) => this.setInputValue('role', val)}
 					data={this.state.rolesData}
 					text="Rol"
-					type="roles"
+					type="title"
 				/>
 				<SubmitButton text="Registrar" disabled={this.state.buttonDisabled} onClick={() => this.createUser()} />
 			</div>

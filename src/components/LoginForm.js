@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import UserStore from '../stores/UserStore';
 import InputField from './InputField';
 import SubmitButton from './SubmitButton';
@@ -63,7 +64,9 @@ class LoginForm extends React.Component {
 					value={this.state.password ? this.state.password : ''}
 					onChange={(val) => this.setInputValue('password', val)}
 				/>
-				<SubmitButton text="Ingresar" disabled={this.state.buttonDisabled} onClick={() => this.doLogin()} />
+				<Link to="/">
+					<SubmitButton text="Ingresar" disabled={this.state.buttonDisabled} onClick={() => this.doLogin()} />
+				</Link>
 			</div>
 		);
 	}
