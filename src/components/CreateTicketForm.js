@@ -1,7 +1,6 @@
 import React from 'react';
 import InputField from './InputField';
 import SubmitButton from './SubmitButton';
-import AsyncSelect from 'react-select/async';
 import SelectField from './SelectField';
 import TextArea from './TextArea';
 const urlApiLocal = 'http://127.0.0.1:8000/api/user/ticket';
@@ -81,8 +80,9 @@ class CreateTicketForm extends React.Component {
 					onChange={(val) => this.setInputValue('priority_id', val)}
 					data={this.state.priorities}
 					text="Prioridad"
-					type="priority"
+					type="name"
 				/>
+				<label>Descripcion</label>
 				<TextArea
 					value={this.state.descripcion ? this.state.descripcion : ''}
 					dafaultValue="Escriba aqui la descripcion de su solicitud"
